@@ -10,10 +10,10 @@ public class EvenOdd {
         int num= sc.nextInt();
 
         //easy method use to every one
-        if(num%2 == 0){
-            System.out.println("EVEN"+num);
-        }else{
+        if(num%2 == 1){
             System.out.println("ODD"+num);
+        }else{
+            System.out.println("EVEN"+num);
         }
 
         //using bit wise
