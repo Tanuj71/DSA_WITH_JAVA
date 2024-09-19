@@ -2,9 +2,10 @@ public class Decimal {
 
 
     public static void main(String[] args) {
-        System.out.println(decimaltobinary(5));
-        System.out.println(binarytodecimal(101));
-        System.out.println(findexponent(2,7));
+//        System.out.println(decimaltobinary(5));
+//        System.out.println(binarytodecimal(101));
+//        System.out.println(findexponent(2,7));
+        System.out.println(binarytoAnybase(5,2));
     }
 
     static int decimaltobinary(int num){
@@ -46,6 +47,16 @@ if(power%2!=0){
         return res;
     }
 
-
+static int binarytoAnybase(int num,int base){
+        int result=0;
+        int power=0;
+        while(num>0){
+            int rem=num%base;
+            num/=base;
+            result+=rem*Math.pow(10,power);
+            power++;
+        }
+        return result;
+}
 
 }
