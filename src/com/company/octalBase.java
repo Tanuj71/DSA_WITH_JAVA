@@ -9,8 +9,8 @@ public class octalBase {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         int base = sc.nextInt();
-
-        System.out.println(octalBase(num,base));
+        System.out.println(dicamtooctal(num,base));
+       // System.out.println(octalBase(num,base));
     }
 
     static int octalBase(int n, int b) {
@@ -23,6 +23,18 @@ while (n>0){
     p*=10;
 
 }
+        return rev;
+    }
+    static int dicamtooctal(int n, int b) {
+        int p=1;
+        int rev = 0;
+        while (n>0){
+            int dig=n%10;
+            n/=10;
+            rev+=dig*p;
+            p*=b;
+
+        }
         return rev;
     }
 }
